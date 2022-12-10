@@ -14,3 +14,6 @@ Realiser par :
        > SBAI SALAH
        > SGHIOURI IDRISSI MOHAMMED
 ```
+![banner](https://github.com/Sbai-Salah/HayatMobileApp/blob/main/imgs/sketch_1.PNG)
+
+![banner](https://github.com/Sbai-Salah/HayatMobileApp/blob/main/imgs/sketch_2.PNG)
