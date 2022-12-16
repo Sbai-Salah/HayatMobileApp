@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.android.App.Hayat.AccountActivity"
+android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:background="@drawable/card_background">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/circle"
+        android:padding="5dp"
+        android:src="@mipmap/profile"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:onClick="MyProfile"/>
+
+    <ImageView
+        android:onClick="GoToHome"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="#fff"
+        android:src="@mipmap/home"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"/>
+
+    <ImageView
+        android:onClick="Logout"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="#fff"
+        android:src="@mipmap/logout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:background="#fff"
+        android:text="My Account"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/background_radian"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icon"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_bold"
+            android:padding="5dp"
+            android:src="@mipmap/profile"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center"
+            android:layout_marginTop="-62dp"/>
+
+        <TextView
+            android:id="@+id/myProfilLabelFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mohammed Benotmane"
+            android:textAlignment="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-5dp"
+            android:weightSum="2">
+            <TextView
+                android:id="@+id/myProfilLabelAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="right"
+                android:layout_weight=".97"/>
+            <android.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".08"/>
+            <TextView
+                android:id="@+id/myProfilLabelSexe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="left"
+                android:layout_weight=".97"/>
+        </LinearLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FullName :"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/myProfilFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:text=""
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone : "
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:id="@+id/myProfilPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+2126"
+                    android:textSize="16dp"
+                    android:layout_weight="1.8"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sexe : "
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/myProfilSexe">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/myProfilSexeMale"
+                        android:text="Male"/>
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/myProfilSexeFemale"
+                        android:text="Female"/>
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age : "
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+                <EditText
+                    android:id="@+id/myProfilAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="number"
+                    android:textSize="16dp"
+                    android:layout_weight="1.8"/>
+            </TableRow>
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blood :"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/myProfilBloodGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:text=""
+                    android:textSize="16dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse :"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/myProfilAdresse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.8"
+                    android:text=""
+                    android:textSize="16dp" />
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+</ScrollView>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight=".50"
+            android:background="@drawable/background_radian_btn"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Update"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/callNowBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight=".50"
+            android:background="@drawable/background_radian_btn"
+            android:onClick="CallHim"
+            android:text="Call Now"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+</LinearLayout>
+
+
