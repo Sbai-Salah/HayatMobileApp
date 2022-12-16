@@ -20,7 +20,7 @@ Mini-Projet Dev Mobile Android 2023
 Realiser par : 
        > CHAYMAE MHARZI 
        > SBAI SALAH
-       > SGHIOURI IDRISSI MOHAMMED
+       > SGHIOURI EL IDRISSI MOHAMMED
 ```
 
 ![MAIN](https://github.com/Sbai-Salah/HayatMobileApp/blob/main/HAYAT/captures/main.PNG)
